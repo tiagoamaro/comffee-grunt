@@ -48,13 +48,13 @@
         dest: 'build/js/<%= pkg.name %>.min.js'
       }
     },
-    clean: ['build', '.sass-cache'],
     watch: {
       scripts: {
-        files: ['**/*.js', '**/*.coffee', '**/*.scss'],
+        files: ['src/**/*.js', 'src/**/*.coffee', 'src/**/*.scss'],
         tasks: ['default']
       }
-    }
+    },
+    clean: ['build', '.sass-cache']
   });
 
   // Loading plugins
