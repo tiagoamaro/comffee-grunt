@@ -1,0 +1,29 @@
+{
+  "name": "comfee",
+  "description": "SCSS, CoffeScript and Compass united",
+  "version": "0.1.0",
+  "author": "Tiago Amaro (http://www.tiagoamaro.com.br)",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "keywords": [
+    "scss",
+    "compass",
+    "coffe"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-coffee": "~0.6.4",
+    "grunt-contrib-compass": "~0.1.3"
+  }
+}

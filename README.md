@@ -1,0 +1,1 @@
+This package compiles SCSS, Compass and CoffScript together
