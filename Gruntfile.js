@@ -13,7 +13,25 @@
     coffee: {
       compile: {
         files: {
-          'src/compiled/coffee_result.js': 'src/**/*.coffee'
+          'src/compiled/js/coffee_result.js': 'src/**/*.coffee'
+        }
+      }
+    },
+    compass: {
+      dist: {
+        options: {
+          // require: ['bootstrap-sass'], //String|Array: Require the given Ruby library before running commands. This is used to access Compass plugins without having a project configuration file.
+          // load: 'bootstrap', //String|Array: Load the framework or extensions found in the specified directory.
+          cssDir: 'build/css',
+          sassDir: 'src/css',
+          imagesDir: 'src/images',
+          fontsDir: 'src/fonts',
+          environment: 'production',
+          outputStyle: 'compressed',
+          relativeAssets: true,
+          noLineComments: true,
+          bundleExec: true,
+          raw: "preferred_syntax = :scss\nhttp_path = '/'"
         }
       }
     },
@@ -27,7 +45,14 @@
       },
       build: {
         src: ['src/**/*.js'],
-        dest: 'build/<%= pkg.name %>.min.js'
+        dest: 'build/js/<%= pkg.name %>.min.js'
+      }
+    },
+    clean: ['build', '.sass-cache'],
+    watch: {
+      scripts: {
+        files: ['**/*.js', '**/*.coffee', '**/*.scss'],
+        tasks: ['default']
       }
     }
   });
@@ -36,7 +61,9 @@
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['coffee', 'uglify', 'compass']);
+  grunt.registerTask('default', ['clean', 'coffee', 'uglify', 'compass']);
 };
