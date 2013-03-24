@@ -21,7 +21,6 @@
       dist: {
         options: {
           // require: ['bootstrap-sass'], //String|Array: Require the given Ruby library before running commands. This is used to access Compass plugins without having a project configuration file.
-          // load: 'bootstrap', //String|Array: Load the framework or extensions found in the specified directory.
           cssDir: 'build/css',
           sassDir: 'src/css',
           imagesDir: 'src/images',
