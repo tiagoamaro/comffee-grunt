@@ -20,7 +20,7 @@
     compass: {
       dist: {
         options: {
-          // require: ['bootstrap-sass'], //String|Array: Require the given Ruby library before running commands. This is used to access Compass plugins without having a project configuration file.
+          // require: ['bootstrap-sass'],
           cssDir: 'build/css',
           sassDir: 'src/css',
           imagesDir: 'src/images',
@@ -30,7 +30,7 @@
           relativeAssets: true,
           noLineComments: true,
           bundleExec: true,
-          raw: "preferred_syntax = :scss\nhttp_path = '/'"
+          raw: "preferred_syntax = :sass\nhttp_path = '/'"
         }
       }
     },

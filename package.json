@@ -1,12 +1,12 @@
 {
-  "name": "comfee",
+  "name": "comffee",
   "description": "SCSS, CoffeScript and Compass united",
   "version": "0.1.0",
-  "author": "Tiago Amaro (http://www.tiagoamaro.com.br)",
+  "author": "Tiago Amaro (https://github.com/tiagoamaro)",
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/comffee"
   },
   "licenses": [
     {
