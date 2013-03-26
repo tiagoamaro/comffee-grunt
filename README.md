@@ -1,5 +1,6 @@
+==============================================
 Comffee : Compass, CoffeScript and SASS united
-===============================================
+==============================================
 
 Compass : https://github.com/chriseppstein/compass
 
