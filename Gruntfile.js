@@ -13,24 +13,23 @@
     coffee: {
       compile: {
         files: {
-          'src/compiled/js/coffee_result.js': 'src/**/*.coffee'
+          'src/coffee_ready/js/coffee_result.js': 'src/**/*.coffee'
         }
       }
     },
     compass: {
       dist: {
         options: {
-          // require: ['bootstrap-sass'],
+          require: ['bootstrap-sass'],
           cssDir: 'build/css',
           sassDir: 'src/css',
-          imagesDir: 'src/images',
-          fontsDir: 'src/fonts',
+          imagesDir: 'images',
+          fontsDir: 'fonts',
           environment: 'production',
           outputStyle: 'compressed',
           relativeAssets: true,
           noLineComments: true,
-          bundleExec: true,
-          raw: "preferred_syntax = :sass\nhttp_path = '/'"
+          bundleExec: true
         }
       }
     },
@@ -49,7 +48,7 @@
     },
     watch: {
       scripts: {
-        files: ['src/**/*.js', 'src/**/*.coffee', 'src/**/*.scss'],
+        files: ['src/**/*.js', 'src/**/*.coffee', 'src/**/*.scss', 'src/**/*.sass'],
         tasks: ['default']
       }
     },
@@ -64,5 +63,5 @@
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['clean', 'coffee', 'uglify', 'compass']);
+  grunt.registerTask('default', ['coffee', 'uglify', 'compass']);
 };
