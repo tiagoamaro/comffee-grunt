@@ -4,7 +4,7 @@ Comffee : Compass, CoffeScript and SASS united
 
 Compass : https://github.com/chriseppstein/compass
 
-CoffeScript : https://github.coam/jashkenas/coffee-script
+CoffeScript : https://github.com/jashkenas/coffee-script
 
 
 This is a sample GruntJS project that unites Compass, CoffeScript and SASS using GruntJS plugins.
