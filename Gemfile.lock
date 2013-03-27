@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
