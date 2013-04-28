@@ -30,6 +30,11 @@ Used GruntJS Plugins: uglify, coffee, compass, clean, watch, jasmine
 
 1. With all dependencies installed, run the `grunt` command and have fun :)
 
+1. Comffee has three tasks: `default`, `complete` and `spec`. 
+	1. The `default` task runs the CoffeScript compiler and Compass
+	1. The `complete` task runs the `default` task and tests
+	1. The `spec` task only runs the application tests
+
 ## Project Structure
 
 ```js
@@ -40,6 +45,8 @@ Used GruntJS Plugins: uglify, coffee, compass, clean, watch, jasmine
 	- css // Put your CSS,SASS or SCSS files here
 	- js  // Put your Coffee or JS files here
 ```
+
+If you want to get rid of your compiled files, run the command `grunt clean`.
 
 -------------------------------------
 
