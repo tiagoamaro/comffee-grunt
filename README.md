@@ -15,4 +15,4 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 
 This is a sample GruntJS project that unites Compass, CoffeScript and SASS using GruntJS plugins.
 
-Used Plugins: uglify, coffee, compass, clean, watch
+Used Plugins: uglify, coffee, compass, clean, watch, jasmine

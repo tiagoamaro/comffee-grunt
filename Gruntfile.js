@@ -15,6 +15,14 @@
         files: {
           'src/coffee_ready/js/coffee_result.js': 'src/**/*.coffee'
         }
+      },
+      glob_to_multiple: {
+        expand: true,
+        flatten: true,
+        cwd: 'spec/coffee',
+        src: ['*.coffee'],
+        dest: 'spec/',
+        ext: '.js'
       }
     },
     compass: {
@@ -30,6 +38,15 @@
           relativeAssets: true,
           noLineComments: true,
           bundleExec: true
+        }
+      }
+    },
+    jasmine: {
+      comffee: {
+        src: 'src/**/*.js',
+        options: {
+          specs: 'spec/**/*Spec.js',
+          helpers: 'spec/**/*Helper.js'
         }
       }
     },
@@ -52,7 +69,10 @@
         tasks: ['default']
       }
     },
-    clean: ['build', '.sass-cache', 'src/coffee_ready']
+    clean: {
+      project: ['build', '.sass-cache', '.grunt', 'src/coffee_ready'],
+      spec: ['spec/**/*.js', '_SpecRunner.html']
+    }
   });
 
   // Loading plugins
@@ -61,7 +81,8 @@
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   // Default task.
-  grunt.registerTask('default', ['coffee', 'uglify', 'compass']);
+  grunt.registerTask('default', ['coffee', 'uglify', 'compass', 'jasmine']);
 };
