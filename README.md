@@ -7,7 +7,7 @@
 
 ## Getting Started
 
-This project requires Grunt '~0.4.0' and 'Compass'
+This project requires Grunt `~0.4.0` and `Compass`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins.
 
@@ -15,4 +15,4 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 
 This is a sample GruntJS project that unites Compass, CoffeScript and SASS using GruntJS plugins.
 
-Used Plugins: uglify, coffee, compass, clean, watch, jasmine
+Used GruntJS Plugins: uglify, coffee, compass, clean, watch, jasmine
