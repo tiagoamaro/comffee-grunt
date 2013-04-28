@@ -1,5 +1,5 @@
 /*
- * comfee
+ * comffee
  *
  * Copyright (c) 2013 Tiago Amaro
  * Licensed under the MIT license.
@@ -52,7 +52,7 @@
         tasks: ['default']
       }
     },
-    clean: ['build', '.sass-cache']
+    clean: ['build', '.sass-cache', 'src/coffee_ready']
   });
 
   // Loading plugins
