@@ -4,7 +4,7 @@
  * Copyright (c) 2013 Tiago Amaro
  * Licensed under the MIT license.
  */
- 
+
  var all_src_files = ['src/**/*.js', 'src/**/*.coffee', 'src/**/*.scss', 'src/**/*.sass'];
 
  module.exports = function(grunt) {
@@ -23,7 +23,7 @@
         flatten: true,
         cwd: 'spec/coffee',
         src: ['*.coffee'],
-        dest: 'spec/',
+        dest: 'spec/coffee_ready',
         ext: '.js'
       }
     },
@@ -81,7 +81,7 @@
     },
     clean: {
       project: ['build', '.sass-cache', '.grunt', 'src/coffee_ready'],
-      spec: ['spec/**/*.js', '_SpecRunner.html']
+      spec: ['spec/coffee_ready', '_SpecRunner.html']
     }
   });
 
@@ -95,6 +95,6 @@
 
   // Default task.
   grunt.registerTask('default', ['coffee', 'uglify', 'compass']);
-  grunt.registerTask('complete', ['coffee', 'uglify', 'compass', 'jasmine']);
+  grunt.registerTask('complete', ['default', 'jasmine']);
   grunt.registerTask('spec', ['jasmine']);
 };
