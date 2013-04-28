@@ -1,9 +1,11 @@
 /*
- * comffee
+ * Comffee
  *
  * Copyright (c) 2013 Tiago Amaro
  * Licensed under the MIT license.
  */
+ 
+ var all_src_files = ['src/**/*.js', 'src/**/*.coffee', 'src/**/*.scss', 'src/**/*.sass'];
 
  module.exports = function(grunt) {
 
@@ -64,9 +66,17 @@
       }
     },
     watch: {
-      scripts: {
-        files: ['src/**/*.js', 'src/**/*.coffee', 'src/**/*.scss', 'src/**/*.sass'],
+      default: {
+        files: all_src_files,
         tasks: ['default']
+      },
+      complete: {
+        files: all_src_files,
+        tasks: ['complete']
+      },
+      spec: {
+        files: all_src_files,
+        tasks: ['spec']
       }
     },
     clean: {
@@ -84,5 +94,7 @@
   grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   // Default task.
-  grunt.registerTask('default', ['coffee', 'uglify', 'compass', 'jasmine']);
+  grunt.registerTask('default', ['coffee', 'uglify', 'compass']);
+  grunt.registerTask('complete', ['coffee', 'uglify', 'compass', 'jasmine']);
+  grunt.registerTask('spec', ['jasmine']);
 };
