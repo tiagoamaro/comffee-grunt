@@ -33,36 +33,28 @@ Used GruntJS Plugins: uglify, coffee, compass, clean, watch, jasmine
 ## Project Structure
 
 ```js
-- fonts // Put your font files here
-- images // Put your image files here, like the glyphicons from bootstrap
-- spec // Put your tests here
+- fonts   // Put your font files here
+- images  // Put your image files here, like the glyphicons from bootstrap
+- spec    // Put your tests here
 - src 
 	- css // Put your CSS,SASS or SCSS files here
-	- js // Put your Coffee or JS files here
+	- js  // Put your Coffee or JS files here
 ```
 
 -------------------------------------
 
 It is important to note that this project has [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass) included.
 
-With bootstrap-sass, you can require all bootstrap JS or individual modules. 
-
-```js
-// Loads all Bootstrap javascripts
-//= require bootstrap
-```
-
-```js
-// Loads individual modules
-//= require bootstrap-scrollspy
-//= require bootstrap-modal
-//= require bootstrap-dropdown
-```
-
 To import bootstrap-sass in your CSS just import it.
 
 ```css
 @import "bootstrap";
+```
+
+If you like to include its responsive support, you could also include the `bootstrap-responsive` file.
+
+```css
+@import "bootstrap-responsive";
 ```
 
 For further information you can read how to configure the [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass/#css)
