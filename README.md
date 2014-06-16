@@ -1,4 +1,4 @@
-# Comffee : Compass, CoffeScript and SASS united
+# Comffee-grunt : Grunt, Compass, CoffeScript and SASS united
 
 - [CoffeScript](https://github.com/jashkenas/coffee-script)
 - [Compass](https://github.com/chriseppstein/compass)
